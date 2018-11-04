@@ -98,10 +98,27 @@ header {
 #produit {
   background: url("../img/produit.jpg") no-repeat center;
   background-size: cover;
-  padding-bottom: 600px; }
+  padding-bottom: 400px; }
   @media (max-width: 767px) {
     #produit {
       padding-bottom: 300px; } }
+  #produit .barre-attendiez {
+    border: solid 1px #FFFFFF;
+    padding-top: 35px;
+    padding-bottom: 10px; }
+    #produit .barre-attendiez p {
+      font-size: 4rem;
+      line-height: 2rem; }
+      @media (max-width: 447px) {
+        #produit .barre-attendiez p {
+          font-size: 3rem;
+          line-height: 2rem; } }
+    #produit .barre-attendiez .attendiez {
+      font-size: 2rem; }
+      @media (max-width: 447px) {
+        #produit .barre-attendiez .attendiez {
+          font-size: 1.5rem;
+          line-height: 0rem; } }
 
 #contact {
   background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url(../img/contact.jpg) no-repeat center;

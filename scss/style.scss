@@ -126,9 +126,29 @@ header {
 
 #produit {
     @include bgimage(produit);
-    padding-bottom: 600px;
+    padding-bottom: 400px;
     @media (max-width: 767px) { 
         padding-bottom: 300px;
+    }
+    .barre-attendiez {
+        border: solid 1px $white-color;
+        padding-top: 35px;
+        padding-bottom: 10px;
+        p {
+            font-size: 4rem;
+            line-height: 2rem;
+            @media (max-width: 447px) {
+                font-size: 3rem;
+                line-height: 2rem;
+            }
+        }
+        .attendiez {
+            font-size: 2rem;
+            @media (max-width: 447px) {
+                font-size: 1.5rem;
+                line-height: 0rem;
+            }
+        }
     }
 }
 
