@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700');
+
+/*Variables*/
+$font: 'Lato', sans-serif;
+$primary-color: #d63251;
+$secondary-color: #111111;
+$white-color: #FFFFFF;
+
+/*General*/
+body {
+    font-family: $font;
+}
+
+/*Titres*/
+h1 {
+    font-size: 6rem;
+    line-height: 3.5rem;
+    .h1-partie1 {
+        font-size: 3rem;
+        .barre {
+            color: $primary-color;
+        }
+    }
+    .h1-partie2 {
+        font-size: 2rem;
+        font-weight: 300;
+        display: block;
+        margin-top: -8px;
+    }
+}
+
+h2 {
+    color: $primary-color;
+    
+    &::after{
+        content: "";
+        display: block;
+        margin: auto;
+        margin-top: 3px;
+        width: 80px;
+        border-bottom: 1px solid $primary-color;
+    }
+}
+
+/*Padding*/
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/*Mixins*/
+@mixin bgimage($fileName) {
+    $url:"../img/#{$fileName}.jpg";
+    background: url($url) no-repeat center;
+    background-size: cover;
+}
+
+/*Sections*/
+header {
+    @include bgimage(home);
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+#presentation {
+    background: $primary-color;
+}
+
+#produit {
+    @include bgimage(produit);
+    padding-bottom: 600px;
+    @media (max-width: 767px) { 
+        padding-bottom: 300px;
+    }
+}
+
+#contact {
+    background:linear-gradient(rgba(0, 0, 0, 0.95),rgba(0, 0, 0, 0.95)), url(../img/contact.jpg) no-repeat center;
+    background-size: cover;
+    .form-control {
+        border:0;
+        background: transparent;
+        border-radius: 0;
+        border-bottom: 1px solid $white-color;
+        width: 90%;
+        &:focus {
+            box-shadow: none !important;
+        }
+        @media (max-width: 767px) { 
+            width: 100%;
+        }
+    }
+    textarea {
+        border: 1px solid $white-color !important;
+        margin-top: 35px;
+        height: 76%;
+    }
+    .btn-primary {
+        background: transparent;
+        border: 1px solid $primary-color;
+        border-radius: 0;
+        margin-top: 90px;
+        &:hover {
+            background: $primary-color;
+        }
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+}
+
+footer {
+    background: $secondary-color;
+}
+
