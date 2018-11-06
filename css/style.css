@@ -29,6 +29,9 @@ body {
   @media (max-width: 991px) {
     .navbar {
       background: #111111 !important; } }
+  .navbar .active {
+    font-weight: 700;
+    color: #d63251 !important; }
 
 /*Titres*/
 h1 {
@@ -151,5 +154,31 @@ header {
 
 footer {
   background: #111111; }
+  footer .logo {
+    width: 80px; }
+  footer .mockup {
+    margin-top: -12px; }
+  footer .circle-facebook {
+    border: solid 1px #FFFFFF;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px; }
+  footer .circle-twitter {
+    border: solid 1px #FFFFFF;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px;
+    padding-left: 7px;
+    padding-right: 6px; }
+  footer .circle-instagram {
+    border: solid 1px #FFFFFF;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px;
+    padding-left: 8px;
+    padding-right: 7px; }
+  footer .fab {
+    display: block;
+    margin-top: -3px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -42,6 +42,10 @@ body {
     @media (max-width: 991px) { 
         background: $secondary-color !important;
     }
+    .active {
+        font-weight: 700;
+        color: $primary-color !important;
+    }
 }
 
 /*Titres*/
@@ -190,4 +194,36 @@ header {
 
 footer {
     background: $secondary-color;
+    .logo {
+        width: 80px;
+    }
+    .mockup {
+        margin-top: -12px;
+    }
+    .circle-facebook {
+        border: solid 1px $white-color;
+        border-radius: 50px;
+        height: 30px;
+        padding: 10px;
+    }
+    .circle-twitter {
+        border: solid 1px $white-color;
+        border-radius: 50px;
+        height: 30px;
+        padding: 10px;
+        padding-left: 7px;
+        padding-right: 6px;
+    }
+    .circle-instagram {
+        border: solid 1px $white-color;
+        border-radius: 50px;
+        height: 30px;
+        padding: 10px;
+        padding-left: 8px;
+        padding-right: 7px;
+    }
+    .fab {
+        display: block;
+        margin-top: -3px;
+    }
 }
