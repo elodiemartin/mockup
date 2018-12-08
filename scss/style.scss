@@ -1,63 +1,70 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,700');
 
-/*Variables*/
+/*Variables couleurs*/
 $font: 'Lato', sans-serif;
-$primary-color: #d63251;
-$secondary-color: #111111;
+$pink:    #d63251;
+$gray-600: #111111;
+$primary: $pink;
+$secondary: $gray-600;
+$transparent: transparent;
 $white-color: #FFFFFF;
+
+/*Variables font-size*/
+$display5-size: 2.25rem;
+$h1-font-size: 7rem;
 
 /*General*/
 body {
     font-family: $font;
 }
 
-.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 /*Nav*/
 .navbar {
-    background: transparent !important;
     .logo {
         width: 85px;
-        @media (max-width: 576px) { 
-            width: 65px;
+        @media (max-width: 1024px) { 
+            width: 65px !important;
         }
-    }
-    .nav-item {
-        padding-right: 1.5rem !important;
-        padding-left: 1.5rem !important;
     }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
     .navbar-toggler {
-        border-color: transparent;
-        font-size: 2.25rem;
+        border-color: $transparent;
+        font-size: $display5-size;
         &:focus {
             outline: none !important;
         }
     }
     @media (max-width: 991px) { 
-        background: $secondary-color !important;
+        background: $secondary !important;
     }
-    .active {
-        font-weight: 700;
-        color: $primary-color !important;
+    @media (max-width: 1024px) { 
+        padding: 0 !important;
+        background: #111111 !important;
     }
 }
 
-/*Titres*/
+.itemRose {
+    color: $pink !important;
+    font-weight: 700;
+}
+
+.itemWhite {
+    color: $white-color !important;
+    font-weight: 300;
+}
+
+/*Titles*/
 h1 {
-    font-size: 7rem;
+    font-size: $h1-font-size;
     line-height: 3.5rem;
     margin-left: 12px;
     margin-top: 5%;
     .h1-partie1 {
         font-size: 3.5rem;
         .barre {
-            color: $primary-color;
+            color: $primary;
         }
         @media (max-width: 715px) { 
             font-size: 2.5rem;
@@ -92,15 +99,15 @@ h1 {
 }
 
 h2 {
-    color: $primary-color;
-    
-    &::after{
+    color: $pink;
+
+    &::after {
         content: "";
         display: block;
         margin: auto;
         margin-top: 3px;
         width: 80px;
-        border-bottom: 1px solid $primary-color;
+        border-bottom: 1px solid $primary;
     }
 }
 
@@ -120,12 +127,13 @@ section {
 /*Sections*/
 header {
     @include bgimage(home);
+    background-position: left;
     background-attachment: fixed;
     height: 100vh;
 }
 
 #presentation {
-    background: $primary-color;
+    background: $primary;
 }
 
 #produit {
@@ -161,7 +169,8 @@ header {
     background-size: cover;
     .form-control {
         border:0;
-        background: transparent;
+        color: $white-color;
+        background: $transparent;
         border-radius: 0;
         border-bottom: 1px solid $white-color;
         width: 90%;
@@ -176,15 +185,14 @@ header {
         border: 1px solid $white-color !important;
         margin-top: 35px;
         height: 76%;
-        width: 100% !important;
     }
     .btn-primary {
-        background: transparent;
-        border: 1px solid $primary-color;
+        background: $transparent;
+        border: 1px solid $primary;
         border-radius: 0;
         margin-top: 90px;
         &:hover {
-            background: $primary-color;
+            background: $primary;
         }
         &:focus {
             box-shadow: none !important;
@@ -193,37 +201,72 @@ header {
 }
 
 footer {
-    background: $secondary-color;
+    background: $secondary;
     .logo {
         width: 80px;
     }
     .mockup {
         margin-top: -12px;
     }
-    .circle-facebook {
+    .navbar {
+        background: $transparent !important;
+    }
+    .active {
+        font-weight: 700;
+        color: $primary !important;
+    }
+    /*Mixin*/
+    @mixin circle {
         border: solid 1px $white-color;
         border-radius: 50px;
         height: 30px;
         padding: 10px;
+        &:hover {
+            border: solid 1px $pink;
+        }
+    }
+    .circle-facebook {
+        @include circle;
+        &:hover {
+            background: $pink;
+        }
     }
     .circle-twitter {
-        border: solid 1px $white-color;
-        border-radius: 50px;
-        height: 30px;
-        padding: 10px;
+        @include circle;
         padding-left: 7px;
         padding-right: 6px;
+        &:hover {
+            background: $pink;
+        }
     }
     .circle-instagram {
-        border: solid 1px $white-color;
-        border-radius: 50px;
-        height: 30px;
-        padding: 10px;
+        @include circle;
         padding-left: 8px;
         padding-right: 7px;
+        padding-top: 9px;
+        &:hover {
+            background: $pink;
+        }
     }
     .fab {
         display: block;
         margin-top: -3px;
+    }
+    a {
+        color: $white-color;
+        &:hover {
+            color: $white-color;
+            text-decoration: none;
+        }
+    }
+    .mentions {
+        &:hover {
+            color: $pink;
+        }
+    }
+    .navbar-footer {
+        @media (max-width: 1024px) { 
+            padding: .5rem 1rem !important;
+        }
     }
 }

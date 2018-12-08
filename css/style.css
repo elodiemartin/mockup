@@ -1,39 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,700");
-/*Variables*/
+/*Variables couleurs*/
+/*Variables font-size*/
 /*General*/
 body {
   font-family: "Lato", sans-serif; }
 
-.container-fluid {
-  padding-left: 0;
-  padding-right: 0; }
-
 /*Nav*/
-.navbar {
-  background: transparent !important; }
-  .navbar .logo {
-    width: 85px; }
-    @media (max-width: 576px) {
-      .navbar .logo {
-        width: 65px; } }
-  .navbar .nav-item {
-    padding-right: 1.5rem !important;
-    padding-left: 1.5rem !important; }
-  .navbar .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-  .navbar .navbar-toggler {
-    border-color: transparent;
-    font-size: 2.25rem; }
-    .navbar .navbar-toggler:focus {
-      outline: none !important; }
-  @media (max-width: 991px) {
-    .navbar {
-      background: #111111 !important; } }
-  .navbar .active {
-    font-weight: 700;
-    color: #d63251 !important; }
+.navbar .logo {
+  width: 85px; }
+  @media (max-width: 1024px) {
+    .navbar .logo {
+      width: 65px !important; } }
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+.navbar .navbar-toggler {
+  border-color: transparent;
+  font-size: 2.25rem; }
+  .navbar .navbar-toggler:focus {
+    outline: none !important; }
+@media (max-width: 991px) {
+  .navbar {
+    background: #111111 !important; } }
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 !important;
+    background: #111111 !important; } }
 
-/*Titres*/
+.itemRose {
+  color: #d63251 !important;
+  font-weight: 700; }
+
+.itemWhite {
+  color: #FFFFFF !important;
+  font-weight: 300; }
+
+/*Titles*/
 h1 {
   font-size: 7rem;
   line-height: 3.5rem;
@@ -92,6 +93,7 @@ section {
 header {
   background: url("../img/home.jpg") no-repeat center;
   background-size: cover;
+  background-position: left;
   background-attachment: fixed;
   height: 100vh; }
 
@@ -128,6 +130,7 @@ header {
   background-size: cover; }
   #contact .form-control {
     border: 0;
+    color: #FFFFFF;
     background: transparent;
     border-radius: 0;
     border-bottom: 1px solid #FFFFFF;
@@ -140,8 +143,7 @@ header {
   #contact textarea {
     border: 1px solid #FFFFFF !important;
     margin-top: 35px;
-    height: 76%;
-    width: 100% !important; }
+    height: 76%; }
   #contact .btn-primary {
     background: transparent;
     border: 1px solid #d63251;
@@ -153,16 +155,26 @@ header {
       box-shadow: none !important; }
 
 footer {
-  background: #111111; }
+  background: #111111;
+  /*Mixin*/ }
   footer .logo {
     width: 80px; }
   footer .mockup {
     margin-top: -12px; }
+  footer .navbar {
+    background: transparent !important; }
+  footer .active {
+    font-weight: 700;
+    color: #d63251 !important; }
   footer .circle-facebook {
     border: solid 1px #FFFFFF;
     border-radius: 50px;
     height: 30px;
     padding: 10px; }
+    footer .circle-facebook:hover {
+      border: solid 1px #d63251; }
+    footer .circle-facebook:hover {
+      background: #d63251; }
   footer .circle-twitter {
     border: solid 1px #FFFFFF;
     border-radius: 50px;
@@ -170,15 +182,34 @@ footer {
     padding: 10px;
     padding-left: 7px;
     padding-right: 6px; }
+    footer .circle-twitter:hover {
+      border: solid 1px #d63251; }
+    footer .circle-twitter:hover {
+      background: #d63251; }
   footer .circle-instagram {
     border: solid 1px #FFFFFF;
     border-radius: 50px;
     height: 30px;
     padding: 10px;
     padding-left: 8px;
-    padding-right: 7px; }
+    padding-right: 7px;
+    padding-top: 9px; }
+    footer .circle-instagram:hover {
+      border: solid 1px #d63251; }
+    footer .circle-instagram:hover {
+      background: #d63251; }
   footer .fab {
     display: block;
     margin-top: -3px; }
+  footer a {
+    color: #FFFFFF; }
+    footer a:hover {
+      color: #FFFFFF;
+      text-decoration: none; }
+  footer .mentions:hover {
+    color: #d63251; }
+  @media (max-width: 1024px) {
+    footer .navbar-footer {
+      padding: .5rem 1rem !important; } }
 
 /*# sourceMappingURL=style.css.map */
