@@ -4,7 +4,7 @@ One page website with Bootstrap, SCSS and Javascript
 
 ## Demo
 
-Do you want to see the website? Visit http://elodie-martin.com/mockup
+Do you want to see the website? Visit https://mockup.elodie-martin.com/
 
 ## Installation
 
